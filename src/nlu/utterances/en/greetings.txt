@@ -1,0 +1,9 @@
+hey
+hi
+hello
+good morning
+good afternoon
+good evening
+morning
+afternoon
+evening

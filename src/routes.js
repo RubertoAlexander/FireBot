@@ -44,6 +44,9 @@ export const routes = [
         React component defined in pages/actions/start.js */
   { path: 'start', text: 'start', action: Start },
 
+  /* Test intent */
+  { intent: 'Greetings', action: Start},
+
   /* Another text rule (perfect match) to trigger the 'end' action */
   { path: 'end', text: 'end', action: End },
 
