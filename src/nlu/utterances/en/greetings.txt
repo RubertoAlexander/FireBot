@@ -1,9 +1,12 @@
+Hey!
 hey
+Hi!
 hi
-hello
-good morning
-good afternoon
-good evening
+Good morning!
+Morning!
+Good evening!
+Good afternoon!
 morning
-afternoon
 evening
+afternoon
+hello

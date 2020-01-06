@@ -1,4 +1,2 @@
-import en from './en'
-import es from './es'
+export const locales = {}
 
-export const locales = { en, es }
