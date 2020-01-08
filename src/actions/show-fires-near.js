@@ -29,10 +29,10 @@ export default class extends React.Component {
     }
 
     render() {
+        this.position();
         return (
             <>
                 <Text>To see if there are fires near you, let me get your location first...</Text>
-                {this.position}
                 <Text>You are at {this.state.lat + ", " + this.state.long}</Text>
             </>
         )
