@@ -1,13 +1,25 @@
 import Start from './actions/start'
-import ShowRestaurants from './actions/show-restaurants'
-import ShowDirections from './actions/show-directions'
-import SayGoodbye from './actions/say-goodbye'
+import ExplainJob from './actions/explain-job'
+import GetLocation from './actions/get-location'
+import FiresNear from './actions/show-fires-near'
+import SayThanks from './actions/say-thanks'
 import NotFound from './actions/not-found'
+import SafetyAdvice from './actions/link-safety'
+import ShowFires from './actions/show-fire-map'
+import Goodbye from './actions/say-goodbye'
 
 export const routes = [
-  { input: i => i.confidence < 0.8, action: NotFound },
-  { intent: 'Greetings', action: Start },
-  { intent: 'BookRestaurant', action: ShowRestaurants },
-  { intent: 'GetDirections', action: ShowDirections },
-  { intent: 'Gratitude', action: SayGoodbye }
+  {input: i => i.confidence < 0.7, action: NotFound},
+  {path: 'start', intent: 'Greetings', action: Start},
+  {path: 'explainJob', intent: 'Job', action: ExplainJob},
+  {path: "safetyAdvice", intent: "BeSafe", action: SafetyAdvice},
+  {path: "showFires", intent: "WhereFires", action: ShowFires},
+  {path: 'firesNear', intent: 'FiresNear', action: GetLocation,
+    childRoutes: [
+      {path: "get-location", payload: "Melbourne", action: FiresNear},
+      {path: "get-location", payload: "Sydney", action: FiresNear},
+    ]
+  },
+  { path: 'Thanks', intent: 'Gratitude', action: SayThanks},
+  {path: 'Bye', intent: 'Bye', action: Goodbye}
 ]

@@ -11,8 +11,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Hi human! 👋</Text>
-        <Text>What can I do for you today? 💃</Text>
+        <Text>Hi! 👋</Text>
+        <Text>My name is Firebot, what can I do for you today? 🚒</Text>
       </>
     )
   }

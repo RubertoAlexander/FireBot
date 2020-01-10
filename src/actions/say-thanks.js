@@ -8,8 +8,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>I'm sorry! I don't understand you!</Text>
-        <Text>Could you please repeat that again?</Text>
+        <Text>You're welcome! 😊</Text>
+        <Text>Just let me know if you need anything else!</Text>
       </>
     )
   }

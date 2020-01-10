@@ -1,0 +1,34 @@
+Where are there fires
+Where are fires
+Where are the bushfires
+Where are bushfires
+Where are the fires
+Where are the bushfires
+Are there bushfires in [NSW](Place)
+Are there bushfires in [New South Wales](Place)
+Are there fires in [NSW](Place)
+Are there fires in [New South Wales](Place)
+Are there fires in [Victoria](Place)
+Are there fires in [VIC](Place)
+Are there bushfires in [VIC](Place)
+Are there bushfires in [Victoria](Place)
+Are there fires in [Queensland](Place)
+Are there fires in [QLD](Place)
+Are there bushfires in [Queensland](Place)
+Are there bushfires in [QLD](Place)
+Are there fires in [NT](Place)
+Are there fires in the [Northern Territory](Place)
+Are there bushfires in [NT](Place)
+Are there bushfires in the [Northern Territory](Place)
+Are there fires in [SA](Place)
+Are there fires in [South Australia](Place)
+Are there bushfires in [SA](Place)
+Are there bushfires in [South Australia](Place)
+Are there fires in [WA](Place)
+Are there fires in [Western Australia](Place)
+Are there bushfires in [WA](Place)
+Are there bushfires in [Western Australia](Place)
+Are there fires in [Tasmania](Place)
+Are there fires in [TAS](Place)
+Are there bushfires in [Tasmania](Place)
+Are there bushfires in [TAS](Place)

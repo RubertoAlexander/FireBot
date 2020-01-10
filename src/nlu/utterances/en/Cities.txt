@@ -1,0 +1,7 @@
+I'm in [Melbourne](City)
+I live in [Melbourne](City)
+I'm in [Sydney](City)
+I live in [Sydney](City)
+I'm in [Albury](City)
+I live in [Albury](City)
+[Brisbane](City)

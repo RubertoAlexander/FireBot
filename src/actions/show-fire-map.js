@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@botonic/react'
+import {Button, Text} from '@botonic/react'
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
@@ -8,8 +8,8 @@ export default class extends React.Component {
     render() {
         return (
             <>
-                <Text>Goodbye! 👋</Text>
-                <Text>Just let me know if you need anything else!</Text>
+                <Text>Please go this website to see the locations of the fires.</Text>
+                <Button url={"https://google.org/crisismap/australia"}>Crisis Map</Button>
             </>
         )
     }
