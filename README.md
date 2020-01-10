@@ -1,6 +1,6 @@
 # Firebot
 
-Chatbot and data visualisation built for Sheda's technical code test. This chatbot is designed as a government organisaiton tool to aid people seeking information about the bushfire crisis in Australia.
+Chatbot and data visualisation built for Sheda's technical code test. This chatbot is designed as a government organisation tool to aid people seeking information about the bushfire crisis in Australia.
 
 ## Technology Stack
 Firebot was built in React.js following the guidelines of the [botonic](https://docs.botonic.io/) framework. 
