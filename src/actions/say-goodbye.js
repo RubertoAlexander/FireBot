@@ -3,14 +3,14 @@ import { Text } from '@botonic/react'
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
-  static contextType = RequestContext
+    static contextType = RequestContext
 
-  render() {
-    return (
-      <>
-        <Text>You're welcome!</Text>
-        <Text>Just let me know if you need anything else!</Text>
-      </>
-    )
-  }
+    render() {
+        return (
+            <>
+                <Text>Goodbye! 👋</Text>
+                <Text>Just let me know if you need anything else!</Text>
+            </>
+        )
+    }
 }
