@@ -27,6 +27,7 @@ botonic deploy
 
 ## Usage
 When talking to the chatbot you may ask it anything you like, however try saying "Hi" or "What do you do?"
+
 Please note: the information about the fire crisis in Australia is not up to date and the distances to the closest fire may be innaccurate.
 
 To add more vocabulary for the chatbot to recognise more words, add to the utterance files and type in the command:
