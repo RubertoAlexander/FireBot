@@ -1,0 +1,108 @@
+import React from 'react'
+import {Reply, Text} from '@botonic/react'
+import { RequestContext } from '@botonic/react'
+import * as geolib from 'geolib';
+
+//Sourced from https://simplemaps.com/data/au-cities
+import Cities from '../../cities.js'
+
+const fireLocations = [
+    {lat: -37.0491119, long: 145.9573896},
+    {lat: -36.9861296, long: 147.2673626},
+    {lat: -37.3517694, long: 147.5290855},
+    {lat: -37.2383802, long: 148.844171},
+    {lat: -36.0929461, long: 147.1619736},
+    {lat: -35.9469816, long: 147.8611158},
+    {lat: -35.6828146, long: 148.0427962},
+    {lat: -36.0073702, long: 148.6318722},
+    {lat: -37.323187, long: 149.6667035},
+    {lat: -36.5166649, long: 149.4824904}
+    ];
+
+export default class extends React.Component {
+
+    static contextType = RequestContext
+    static async botonicInit({ input, session, params }) {
+        let city = params.city;
+        return { city }
+    }
+
+    /**
+     * NOTE: Not working as intended, unsupported
+     * @returns {Promise<void>}
+     */
+    getPosition = async () => {
+        await navigator.geolocation.getCurrentPosition(
+            position => this.setState({
+                lat: position.coords.latitude,
+                long: position.coords.longitude
+            }),
+            err => console.log(err)
+        );
+        await console.log(this.state.lat, this.state.long);
+        await this.setState({fireDist: this.getClosestDistance()});
+    }
+
+    /**
+     * Traverses array of coordinates and returns the closest distance to a fire for the user
+     * @returns distance in metres of closest fire
+     */
+    getClosestDistance = () => {
+        let i = 1;
+        let closestDistance = fireLocations[0];
+        while (i < fireLocations.length) {
+
+            console.log(fireLocations[i]);
+
+            let measuredDistance = geolib.getDistance(
+                {latitude: this.state.lat, longitude: this.state.long},
+                {latitude: fireLocations[i].lat, longitude: fireLocations[i].long});
+
+            if (measuredDistance < closestDistance) {
+                closestDistance = measuredDistance;
+            }
+
+            i++;
+        }
+
+        return closestDistance;
+    }
+
+    /**
+     * Finds the city the user is located in with a list of cities and calculates the distance to the closest fire
+     * @param userCity City the user is located in
+     * @returns fireDistance Distance in km to the closest fire
+     */
+    getClosestFire = (userCity) => {
+        let fireDistance;
+        for (let i = 0; i < Cities.length; ++i) {
+            if (Cities[i].city === userCity) {
+
+                let closestFire = geolib.findNearest(
+                    {latitude: Cities[i].lat, longitude: Cities[i].lng},
+                    fireLocations
+                );
+                console.log(closestFire);
+
+                fireDistance = geolib.getDistance(
+                    {latitude: Cities[i].lat, longitude: Cities[i].lng},
+                    {latitude: closestFire.lat, longitude: closestFire.long}
+                );
+                console.log(fireDistance);
+
+                i = Cities.length;
+            }
+        }
+        console.log(fireDistance);
+        return fireDistance / 1000;
+    }
+
+    render() {
+        let fireDist = this.getClosestFire(this.props.city);
+        return (
+            <>
+                <Text>The closest fire to you is {fireDist} km away.</Text>
+            </>
+        )
+    }
+}
