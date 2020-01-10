@@ -12,7 +12,7 @@ export default class extends React.Component {
     return (
       <>
         <Text>Hi! 👋</Text>
-        <Text>My name is Firebot, what can I do for you today? 💃</Text>
+        <Text>My name is Firebot, what can I do for you today? 🚒</Text>
       </>
     )
   }

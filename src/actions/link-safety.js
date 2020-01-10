@@ -8,7 +8,8 @@ export default class extends React.Component {
     render() {
         return (
             <>
-                <Text>Please see the following information to be safe, we have a video and a survival plan for you to look through.</Text>
+            <Text>Please see the following information and follow its guidelines to be safe.</Text>
+                <Text> We have a video and a survival plan for you to look through. 📖 </Text>
                 <div style={{marginLeft: "10%"}}>
                     <Element>
                         <iframe width="200" height="125" src="https://www.youtube.com/embed/o2YgHWnw2Yo" frameBorder="0"
